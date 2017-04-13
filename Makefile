@@ -7,7 +7,6 @@ install-glide:
 	wget "https://github.com/Masterminds/glide/releases/download/${GLIDE_VERSION}/glide-${GLIDE_VERSION}-linux-amd64.tar.gz"
 	mkdir -p $HOME/bin
 	tar -vxz -C $HOME/bin --strip=1 -f glide-${GLIDE_VERSION}-linux-amd64.tar.gz
-	export PATH="$HOME/bin:$PATH"
 
 setup:
 	glide install

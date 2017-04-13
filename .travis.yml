@@ -5,4 +5,5 @@ go:
 
 install:
   - make install-glide
+  - export PATH="$HOME/bin:$PATH"
   - make setup
