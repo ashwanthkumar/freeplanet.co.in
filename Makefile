@@ -4,9 +4,10 @@ VERSION = 0.1.0-dev
 GLIDE_VERSION = 0.9.0
 
 install-glide:
-	wget "https://github.com/Masterminds/glide/releases/download/${GLIDE_VERSION}/glide-${GLIDE_VERSION}-linux-amd64.tar.gz"
+	curl -sSL https://github.com/Masterminds/glide/releases/download/${GLIDE_VERSION}/glide-${GLIDE_VERSION}-linux-amd64.tar.gz | tar -xzf - -C /tmp/
+	chmod +x /tmp/linux-amd64/glide
 	mkdir -p $HOME/bin
-	tar -vxz -C $HOME/bin --strip=1 -f glide-${GLIDE_VERSION}-linux-amd64.tar.gz
+	cp /tmp/linux-amd64/glide /usr/bin/
 
 setup:
 	glide install
