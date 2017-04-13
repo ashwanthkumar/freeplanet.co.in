@@ -7,7 +7,7 @@ install-glide:
 	curl -sSL https://github.com/Masterminds/glide/releases/download/${GLIDE_VERSION}/glide-${GLIDE_VERSION}-linux-amd64.tar.gz | tar -xzf - -C /tmp/
 	chmod +x /tmp/linux-amd64/glide
 	mkdir -p $HOME/bin
-	cp /tmp/linux-amd64/glide /usr/bin/
+	mv /tmp/linux-amd64/glide $HOME/bin/
 
 setup:
 	glide install
