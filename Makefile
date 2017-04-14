@@ -17,6 +17,9 @@ build-all: build-mac build-linux
 build:
 	go build -o ${APPNAME} .
 
+run: build
+	./${APPNAME}
+
 build-server:
 	go build -o ${APPNAME}-server github.com/ashwanthkumar/freeplanet.co.in/server
 
