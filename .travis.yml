@@ -7,3 +7,7 @@ install:
   - make install-glide
   - export PATH="$HOME/bin:$PATH"
   - make setup
+
+script:
+  - make test
+  - make build-all
